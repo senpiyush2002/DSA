@@ -80,13 +80,7 @@ class Binary_Search_Tree:
     list in specific order
     """      
     
-#Printing
-def PrintTree(self):
-        if self.left:
-            self.left.PrintTree()
-        print( self.data),
-        if self.right:
-            self.right.PrintTree()
+
     
 #List
 elements= [1, 2, 4, 4, 3, 3, 3, 6, 5]
@@ -98,6 +92,18 @@ root = Binary_Search_Tree(elements[0])
         root.Add_Node(elements[i])
 
     return root
+
+def In_Order_Traversal(self):
+    output = []
+    if self.Left_child:
+        output += self.Left_child.In_Order_Traversal()
+
+    output.append(self.data)
+
+    if self.Right_child:
+        output += self.Right_child.In_Order_Traversal()
+
+    return output
   
-  #Print
-root.PrintTree()
+#Print
+print(*Output)
