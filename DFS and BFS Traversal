@@ -1,8 +1,5 @@
 from collections import defaultdict
- 
-# This class represents a directed graph using adjacency list representation
- 
- 
+  
 class Graph:
  
     # Constructor
@@ -27,7 +24,7 @@ class Graph:
                 self.DFSUtil(neighbour, visited)
  
     # Main DFS Function
-    def DFS(self, v):
+    def DFS(self, v): 
  
         # Create a set to store visited vertices
         visited = set()
