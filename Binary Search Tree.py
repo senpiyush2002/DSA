@@ -86,24 +86,38 @@ class Binary_Search_Tree:
 elements= [1, 2, 4, 4, 3, 3, 3, 6, 5]
     
 def Build_Tree(elements):
-root = Binary_Search_Tree(elements[0])
+    root = Binary_Search_Tree(elements[0])
 
     for i in range(1,len(elements)):
         root.Add_Node(elements[i])
 
     return root
 
-def In_Order_Traversal(self):
-    output = []
-    if self.Left_child:
-        output += self.Left_child.In_Order_Traversal()
+def printInorder(root):
+ 
+    if root:
+ 
+        # First recur on left child
+        printInorder(root.Left_child)
+ 
+        # then print the data of node
+        print(root.data),
+ 
+        # now recur on right child
+        printInorder(root.Right_child)
 
-    output.append(self.data)
 
-    if self.Right_child:
-        output += self.Right_child.In_Order_Traversal()
 
-    return output
-  
-#Print
-print(*output)
+root=Build_Tree(elements)
+printInorder(root)
+
+
+"""
+Output:
+1
+2
+3
+4
+5
+6
+"""
