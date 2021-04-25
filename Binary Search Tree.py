@@ -106,4 +106,4 @@ def In_Order_Traversal(self):
     return output
   
 #Print
-print(*Output)
+print(*output)
