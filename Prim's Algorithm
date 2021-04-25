@@ -1,4 +1,4 @@
-import sys # Library for INTEGER OF MAX SIZE
+import sys # Library for Integer of Max Size
   
 class Graph():
   
