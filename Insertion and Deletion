@@ -1,0 +1,21 @@
+    def Add_Node(self, data):
+        if data == self.data:
+            return # node already exist
+
+        """
+        If the data we are inserting is Less
+        than the value of the current node, then
+        data will insert in Left node
+        """
+        
+        if data < self.data:
+            if self.Left_child:
+                self.Left_child.Add_Node(data)
+            else:
+                self.Left_child = Binary_Search_Tree(data)
+         
+            """
+            If the data we are inserting is Greater
+            than the value of the current node, then
+            data will insert in Right node
+            """
