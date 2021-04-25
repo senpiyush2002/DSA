@@ -73,7 +73,6 @@ class Graph:
             print("%d -- %d == %d" % (u, v, weight))
         print("Minimum Spanning Tree" , minimumCost)
  
-# Driver code
 g = Graph(4)
 g.addEdge(0, 1, 10)
 g.addEdge(0, 2, 6)
