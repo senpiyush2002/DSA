@@ -58,18 +58,15 @@ g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
  
 g.dijkstra(0)
 
-"""
-Output:
+#  Output:
 
-Vertex tDistance from Source
-0 t 0
-1 t 4
-2 t 12
-3 t 19
-4 t 21
-5 t 11
-6 t 9
-7 t 8
-8 t 14
-
-"""
+#  Vertex tDistance from Source
+#  0 t 0
+#  1 t 4
+#  2 t 12
+#  3 t 19
+#  4 t 21
+#  5 t 11
+#  6 t 9
+#  7 t 8
+#  8 t 14
