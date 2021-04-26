@@ -80,13 +80,12 @@ g.DFS(2)
 print ("Following is Breadth First Traversal (starting from vertex 2)")
 g.BFS(2)
 
-""" Output of DFS:
-Following is DFS from (starting from vertex 2)
-2 0 1 3
-"""
+#   Output of DFS:
+#   Following is DFS from (starting from vertex 2)
+#   2 0 1 3
 
 
-""" Output of BFS:
-Following is Breadth First Traversal (starting from vertex 2)
-2 0 3 1
-"""
+
+#   Output of BFS:
+#   Following is Breadth First Traversal (starting from vertex 2)
+#   2 0 3 1
