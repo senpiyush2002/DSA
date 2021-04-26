@@ -112,12 +112,10 @@ root=Build_Tree(elements)
 printInorder(root)
 
 
-"""
-Output:
-1
-2
-3
-4
-5
-6
-"""
+#  Output:
+#  1
+#  2
+#  3
+#  4
+#  5
+#  6
