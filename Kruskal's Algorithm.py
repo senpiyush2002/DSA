@@ -83,13 +83,10 @@ g.addEdge(2, 3, 4)
 # Function call
 g.KruskalMST()
 
-"""
-Output:
+#  Output:
 
-Edges in the constructed MST
-2 -- 3 == 4
-0 -- 3 == 5
-0 -- 1 == 10
-Minimum Spanning Tree 19
-
-"""
+#  Edges in the constructed MST
+#  2 -- 3 == 4
+#  0 -- 3 == 5
+#  0 -- 1 == 10
+#  Minimum Spanning Tree 19
