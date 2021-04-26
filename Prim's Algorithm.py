@@ -1,4 +1,4 @@
-import sys # Library for Integer of Max Size
+import sys      # Library for Integer of Max Size
   
 class Graph():
   
@@ -65,12 +65,10 @@ g.graph = [ [0, 2, 0, 6, 0],
   
 g.primMST();
 
-"""Output:
+#  Output:
 
-Edge 	Weight
-0 - 1 	 2
-1 - 2 	 3
-0 - 3 	 6
-1 - 4 	 5
-
-"""
+#  Edge 	Weight
+#  0 - 1 	 2
+#  1 - 2 	 3
+#  0 - 3 	 6
+#  1 - 4 	 5
