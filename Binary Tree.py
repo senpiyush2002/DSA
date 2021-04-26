@@ -38,3 +38,10 @@ root.insert(2)
 
 #Print
 root.PrintTree()
+
+
+#   Output
+#   1
+#   2
+#   5
+#   12
