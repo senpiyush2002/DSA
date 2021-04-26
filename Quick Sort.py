@@ -40,19 +40,11 @@ for i in range(n):
     print("%d" % arr[i])
 
 
-"""
-Output:
+#  Output:
 
-Sorted array is:
-2
-6
-23
-24
-41
-
-"""
-n = len(arr)
-quickSort(arr, 0, n-1)
-print("Sorted array is:")
-for i in range(n):
-    print("%d" % arr[i])
+#  Sorted array is:
+#  2
+#  6
+#  23
+#  24
+#  41
