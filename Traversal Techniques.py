@@ -1,82 +1,91 @@
 class Node:
-
-    def __init__(self, data):
-
+    def __init__(self, key):
         self.left = None
         self.right = None
-        self.data = data
+        self.val = key
+ 
+ 
+# Inorder tree traversal
+def printInorder(root):
+ 
+    if root:
+ 
+        # First recur on left child
+        printInorder(root.left)
+ 
+        # then print the data of node
+        print(root.val),
+ 
+        # now recur on right child
+        printInorder(root.right)
+ 
+ 
+# Postorder tree traversal
+def printPostorder(root):
+ 
+    if root:
+ 
+        # First recur on left child
+        printPostorder(root.left)
+ 
+        # the recur on right child
+        printPostorder(root.right)
+ 
+        # now print the data of node
+        print(root.val),
+ 
+ 
+# Preorder tree traversal
+def printPreorder(root):
+ 
+    if root:
+ 
+        # First print the data of node
+        print(root.val),
+ 
+        # Then recur on left child
+        printPreorder(root.left)
+ 
+        # Finally recur on right child
+        printPreorder(root.right)
+ 
 
-    def insert(self, data):
-#Comparing the new value with the parent node
-        if self.data:
-            if data < self.data:
-                if self.left is None:
-                    self.left = Node(data)
-                else:
-                    self.left.insert(data)
-            elif data > self.data:
-                if self.right is None:
-                    self.right = Node(data)
-                else:
-                    self.right.insert(data)
-        else:
-            self.data = data
-
-#Printing
-    def PrintTree(self):
-        if self.left:
-            self.left.PrintTree()
-        print( self.data),
-        if self.right:
-            self.right.PrintTree()
-
-
-root.PrintTree()
-
-
-#Inorder traversal
-# Left -> Root -> Right
-    def inorderTraversal(self, root):
-        res = []
-        if root:
-            res = self.inorderTraversal(root.left)
-            res.append(root.data)
-            res = res + self.inorderTraversal(root.right)
-        return res
-        
-#Preorder traversal
-# Root -> Left ->Right
-    def PreorderTraversal(self, root):
-        res = []
-        if root:
-            res.append(root.data)
-            res = res + self.PreorderTraversal(root.left)
-            res = res + self.PreorderTraversal(root.right)
-        return res
-        
-#Postorder traversal
-# Left ->Right -> Root
-    def PostorderTraversal(self, root):
-        res = []
-        if root:
-            res = self.PostorderTraversal(root.left)
-            res = res + self.PostorderTraversal(root.right)
-            res.append(root.data)
-        return res
-        
-#Input        
+# Driver code
 root = Node(1)
-root.insert(12)
-root.insert(32)
-root.insert(15)
-root.insert(21)
-root.insert(27)
-root.insert(58)    
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
 
-#Print
-root.PrintTree()
 
-#Printing Traversals        
-print(root.inorderTraversal(root))        
-print(root.PreorderTraversal(root))        
-print(root.PostorderTraversal(root)) 
+print("Preorder traversal of binary tree is")
+printPreorder(root)
+ 
+print("\nInorder traversal of binary tree is")
+printInorder(root)
+ 
+print("\nPostorder traversal of binary tree is")
+printPostorder(root)
+
+
+#   Output:
+#   Preorder traversal of binary tree is
+#   1
+#   2
+#   4
+#   5
+#   3
+
+#   Inorder traversal of binary tree is
+#   4
+#   2
+#   5
+#   1
+#   3
+
+#   Postorder traversal of binary tree is
+#   4
+#   5
+#   2
+#   3
+#   1
