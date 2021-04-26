@@ -1,20 +1,20 @@
 class Node:
-def __init__(self, data):
+ def __init__(self, data):
   self.data = data
   self.right = None
   self.left = None
   self.parent = None
 
 class BinarySearchTree:
-def __init__(self):
+ def __init__(self):
   self.root = None
 
-def minimum(self, x):
+ def minimum(self, x):
   while x.left != None:
     x = x.left
   return x
 
-def insert(self, n):                                              #Insertion
+ def insert(self, n):                                              #Insertion
   y = None
   temp = self.root
   while temp != None:
@@ -33,7 +33,7 @@ def insert(self, n):                                              #Insertion
   else:
     y.right = n
 
-def transplant(self, u, v):                                        #Transplant- Used in Deletion to prevent Disconnection of a branch if the node in between branch is deleted
+ def transplant(self, u, v):                                        #Transplant- Used in Deletion to prevent Disconnection of a branch if the node in between branch is deleted
   if u.parent == None:
     self.root = v
   elif u == u.parent.left:
@@ -44,7 +44,7 @@ def transplant(self, u, v):                                        #Transplant- 
   if v != None:
     v.parent = u.parent
 
-def delete(self, z):                                               #Deletion
+ def delete(self, z):                                               #Deletion
   if z.left == None:
     self.transplant(z, z.right)
 
@@ -62,14 +62,14 @@ def delete(self, z):                                               #Deletion
     y.left = z.left
     y.left.parent = y
 
-def inorder(self, n):
+ def inorder(self, n):
   if n != None:
     self.inorder(n.left)
     print(n.data)
     self.inorder(n.right)
 
 if __name__ == '__main__':
-t = BinarySearchTree()
+ t = BinarySearchTree()
 
 a = Node(10)
 b = Node(20)
@@ -103,3 +103,16 @@ t.delete(a)
 t.delete(m)
 
 t.inorder(t.root)
+
+#   Output
+#   20
+#   30
+#   40
+#   50
+#   60
+#   70
+#   80
+#   90
+#   100
+#   110
+#   150
